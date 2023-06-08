@@ -1,0 +1,4 @@
+**.d.ts
+/packages/a-ui
+dist
+node_modules
