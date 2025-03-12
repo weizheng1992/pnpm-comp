@@ -1,0 +1,116 @@
+@import url('../../common/index.less');
+.@{prefix}-button {
+  --el-button-font-weight: var(--el-font-weight-primary);
+  --el-button-bg-color: var(--el-fill-color-blank);
+  --el-button-text-color: var(--el-text-color-regular);
+  --el-button-disabled-text-color: var(--el-disabled-text-color);
+  --el-button-disabled-bg-color: var(--el-fill-color-blank);
+  --el-button-disabled-border-color: var(--el-border-color-light);
+  --el-button-hover-text-color: var(--el-color-primary-light-5);
+  --el-button-hover-bg-color: var(--el-color-primary-light-9);
+  --el-button-outline-color: var(--el-color-primary-light-5);
+  --el-button-hover-link-text-color: var(--el-color-info);
+  --el-button-active-color: var(--el-text-color-primary);
+  --el-button-box-shadow: var(--el-box-shadow);
+  --el-button-size: 48px;
+  --el-button-width: 144px;
+}
+
+.@{prefix}-button--primary {
+  --el-button-text-color: var(--el-color-white);
+  --el-button-bg-color: var(--el-color-primary);
+  --el-button-outline-color: var(--el-color-primary-light-5);
+  --el-button-active-color: var(--el-color-primary-dark-2);
+  --el-button-hover-text-color: var(--el-color-white);
+  --el-button-hover-link-text-color: var(--el-color-primary-light-5);
+  --el-button-hover-bg-color: var(--el-text-color-regular);
+  --el-button-disabled-text-color: var(--el-color-white);
+  --el-button-disabled-bg-color: var(--el-text-color-primary-disabled);
+}
+
+.@{prefix}-button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--el-button-width);
+  height: var(--el-button-size);
+  margin: 0;
+  font-size: var(--el-font-size-base);
+  line-height: 1;
+  color: var(--el-button-text-color);
+  text-align: center;
+  white-space: nowrap;
+  appearance: none;
+  appearance: none;
+  cursor: pointer;
+  background: var(--el-button-bg-color);
+  border: none;
+  border-radius: var(--el-border-radius-base);
+  outline: none;
+  box-shadow: var(--el-button-box-shadow);
+  transition: 0.1s;
+
+  .@{prefix}-button-text {
+    display: inline-block;
+    margin: 0 4px;
+  }
+
+  &:hover {
+    color: var(--el-button-hover-text-color);
+  }
+
+  &.is-loading {
+    position: relative;
+    pointer-events: none;
+  }
+}
+
+.@{prefix}-button--primary {
+  &:hover {
+    background-color: var(--el-button-hover-bg-color);
+  }
+}
+
+.@{prefix}-button.is-disabled {
+  color: var(--el-button-disabled-text-color);
+  cursor: not-allowed;
+  background-color: var(--el-button-disabled-bg-color);
+  background-image: none;
+}
+
+.@{prefix}-button--text {
+  padding-right: 0;
+  padding-left: 0;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+
+  &:hover {
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  &.is-disabled {
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
+
+.is-round {
+  border-radius: var(--el-border-radius-round);
+}
+
+// size
+.@{prefix}-button--large {
+  --el-button-size: 56px;
+  --el-button-width: 160px;
+
+  font-size: var(--el-font-size-medium);
+}
+
+.@{prefix}-button--small {
+  padding: 9px 15px;
+  font-size: 12px;
+  border-radius: calc(var(--el-border-radius-base) - 1px);
+}
